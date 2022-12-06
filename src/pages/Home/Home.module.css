@@ -1,0 +1,231 @@
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+@media(width <=700px){
+    .container{
+        grid-template-columns: none;
+        grid-template-rows: max-content 1fr;
+        
+    }
+    .sidePanel{
+        padding-right: 30px !important;
+        padding-bottom: 30px;
+    }
+    .container .content{
+        order: 1
+    }
+}
+
+.content{
+    padding-right: 30px;
+    position: relative;
+}
+
+.sidePanel {
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+@media (width <= 1100px) {
+    .sidePanel{
+        padding-right: 10px;
+    }
+}
+
+.sidePanel form{
+    padding: 20px;
+    background: #E14D2A;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.sidePanel input, .sidePanel select{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 8px;
+    background: transparent;
+    border: 2px solid rgba(253, 132, 31, 0.55);
+    font-size: 1em;
+    color: #fff;
+}
+
+.sidePanel input:focus{
+    border-color: #FD841F;
+}
+
+.sidePanel label{
+    margin: 0 auto 20px;
+    display: block;
+    color: #fff;
+}
+
+.sidePanel button{
+    cursor: pointer;
+    background: rgb(253, 132, 31);
+    color: #fff;
+    border: 0;
+    font-size: 1em;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: block;
+    width: 100%;
+}
+
+.sidePanel button:hover{
+    background: rgba(253, 132, 31, 0.8);
+}
+
+.sidePanel button:disabled{
+    pointer-events: none;
+    background: rgba(253, 132, 31, 0.5);
+}
+
+.sidePanel h3{
+    color: #E14D2A;
+    margin-bottom: 20px;
+    text-align: center;
+    user-select: none;
+}
+
+.sidePanel aside {
+    margin-top: 40px;
+    color: #555;
+}
+
+.sidePanel aside li{
+    margin: 10px;
+}
+
+.sidePanel span{
+    user-select: none;
+}
+
+.sidePanelCategory{
+    margin-bottom: 8px;
+    user-select: none;
+}
+
+/* transaction List header */
+.listHeader{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 20px 10px;
+    align-items: center;
+}
+.listHeader h3{
+    font-size: 1.2em;
+}
+.listHeader form{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 15px;
+    z-index: 2;
+}
+
+.listHeader button{
+    display: block;
+    cursor: pointer;
+    background: #fd841f;
+    color: #fff;
+    border: 0;
+    font-size: 1em;
+    border-radius: 6px;
+    width: 100%;
+}
+
+/* Tranaction List */
+
+.transactions li{
+    margin: 10px 10px 10px 10px;
+    border: 1px solid #f2f2f2;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-left: 8px solid #E14D2A;
+    border-radius: 8px;
+}
+
+.transactions .name{
+    color: #555;
+    font-size: 0.9em;
+}
+
+.transactions .amount{
+    margin-left: auto;
+    margin-right: 40px;
+    color: #555;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+@media (width <= 700px) {
+    .content{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.transactions span{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    border: none;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.category{
+    margin: 20px 10px;
+    padding: 20px 0px 5px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid #fd841f;
+    cursor: pointer;
+}
+
+.category .categoryName{
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.category .categoryTotal{
+    margin-left: auto;
+    margin-right: 15px;;
+    color: #555;
+    font-weight: bolder;
+    font-size: 1em;
+}
+
+.transactionBody{
+    display: none;
+}
+
+.transactionBody.open{
+    display: block;
+}
+
+.icon {
+    font-size: 13px;
+    transform: rotate(0deg);
+    transition: all .2s ease-in-out;
+  }
+  
+.icon.open {
+    transform: rotate(90deg);
+}
+

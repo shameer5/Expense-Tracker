@@ -1,0 +1,58 @@
+.navbar{
+    background: #001253;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 10px;
+}
+
+.navbar ul{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.title{
+    font-size: 1.2em;
+    margin-right: auto;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+}
+
+.navbar a, .navbar button{
+    margin-left: 16px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar li button{
+    color: #fff;
+    cursor: pointer;
+    background: #E14D2A;
+    border: 2px solid #E14D2A;
+    border-radius: 8px;
+}
+
+.navbar li button:hover{
+    background: rgba(225, 77, 42, 0.8);
+}
+
+.navbar li.signup a{
+    background: #3E6D9C;
+    padding: 2px 7px;
+    border-radius: 8px;
+    border: 2px solid #3E6D9C;
+}
+
+.navbar li.signup a:hover{
+    background:#001253;
+    border: 2px solid #fff;
+}
+
+.navbar li{
+    font-weight: 600;
+}
